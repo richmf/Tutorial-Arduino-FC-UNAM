@@ -1,3 +1,6 @@
+## Copia y pega esta parte del código:
+
+```cpp
 // C++ code
 //
 void setup()
@@ -12,3 +15,6 @@ void loop()
   digitalWrite(10, LOW);
   delay(1000); // Wait for 1000 millisecond(s)
 }
+```
+____
+[Regresar al tutorial](#)
