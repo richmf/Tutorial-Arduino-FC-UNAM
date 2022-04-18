@@ -17,4 +17,4 @@ void loop()
 }
 ```
 ____
-[Regresar al tutorial](#)
+[Regresar al tutorial de GitHub](https://github.com/richmf/Tutorial-Arduino-FC-UNAM)
