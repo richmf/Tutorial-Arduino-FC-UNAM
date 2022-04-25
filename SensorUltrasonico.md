@@ -3,29 +3,41 @@
 ```cpp
 // C++ code
 //
-int rojo=12;
-int amarillo=11;
-int verde=10;
+int trig = 7;
+int echo = 4;
+int led = 10;
+int tiempo;
+int distancia;
+
 void setup()
 {
-  pinMode(rojo, OUTPUT);
-  pinMode(amarillo, OUTPUT);
-  pinMode(verde, OUTPUT);
+  pinMode(led, OUTPUT);
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT);
 }
+
 void loop()
 {
-  digitalWrite(rojo, HIGH);
-  digitalWrite(amarillo, LOW);
-  digitalWrite(verde, LOW);
-  delay(6000); 
-  digitalWrite(verde, HIGH);
-  digitalWrite(rojo, LOW);
-  digitalWrite(amarillo, LOW);
-  delay(4000); 
-  digitalWrite(amarillo, HIGH);
-  digitalWrite(verde, LOW);
-  digitalWrite(rojo, LOW);
+  digitalWrite(trig, HIGH);
+  delay(1);
+  digitalWrite(trig, LOW);
+  tiempo= pulseIn(echo, HIGH);
+  distancia = tiempo / 58.2; 
+  
+  if (distancia < 50)
+  {
+    digitalWrite(led, HIGH);
+  }
+  else
+  {
+    digitalWrite(led, LOW);
+    {
+    }
+  digitalWrite(led, HIGH);
   delay(2000); 
+  digitalWrite(led, LOW);
+  delay(1000);
+  }
 }
 ```
 ____
