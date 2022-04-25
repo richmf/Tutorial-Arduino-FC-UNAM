@@ -1,44 +1,34 @@
 ## Copia y pega esta parte del código:
 
+```cpp
 // C++ code
 //
-int trig = 7;
-int echo = 4;
-int led = 10;
-int tiempo;
-int distancia;
-
+int rojo=12;
+int amarillo=11;
+int verde=10;
 void setup()
 {
-  pinMode(led, OUTPUT);
-  pinMode(trig, OUTPUT);
-  pinMode(echo, INPUT);
+  pinMode(rojo, OUTPUT);
+  pinMode(amarillo, OUTPUT);
+  pinMode(verde, OUTPUT);
 }
-
 void loop()
 {
-  digitalWrite(trig, HIGH);
-  delay(1);
-  digitalWrite(trig, LOW);
-  tiempo= pulseIn(echo, HIGH);
-  distancia = tiempo / 58.2;  //Convertir el tiempo en centimetros
-  
-  if (distancia < 50)
-  {
-    digitalWrite(led, HIGH);
-  }
-  else
-  {
-    digitalWrite(led, LOW);
-    {
-    }
-  digitalWrite(led, HIGH);
+  digitalWrite(rojo, HIGH);
+  digitalWrite(amarillo, LOW);
+  digitalWrite(verde, LOW);
+  delay(6000); 
+  digitalWrite(verde, HIGH);
+  digitalWrite(rojo, LOW);
+  digitalWrite(amarillo, LOW);
+  delay(4000); 
+  digitalWrite(amarillo, HIGH);
+  digitalWrite(verde, LOW);
+  digitalWrite(rojo, LOW);
   delay(2000); 
-  digitalWrite(led, LOW);
-  delay(1000);
-  }
 }
-
+```
+____
 [Regresar al tutorial en el micrositio](#)
 
 [Regresar al tutorial en GitHub](https://github.com/richmf/Tutorial-Arduino-FC-UNAM)
