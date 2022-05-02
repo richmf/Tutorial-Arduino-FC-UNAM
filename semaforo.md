@@ -3,24 +3,30 @@
 ```cpp
 // C++ code
 //
-// C++ code
-//
-int gas;
-int piezo = 13;
+int rojo=12;
+int amarillo=11;
+int verde=10;
 void setup()
 {
-  pinMode(A0, INPUT);
-  pinMode(piezo, OUTPUT);
+  pinMode(rojo, OUTPUT);
+  pinMode(amarillo, OUTPUT);
+  pinMode(verde, OUTPUT);
 }
 
 void loop()
 {
-  gas = analogRead(A0);
-  if (gas >=600)
-  	{
-    tone(piezo, 523, 200);
-    delay(500);
-  	}
+  digitalWrite(rojo, HIGH);
+  digitalWrite(amarillo, LOW);
+  digitalWrite(verde, LOW);
+  delay(6000); 
+  digitalWrite(verde, HIGH);
+  digitalWrite(rojo, LOW);
+  digitalWrite(amarillo, LOW);
+  delay(4000); 
+  digitalWrite(amarillo, HIGH);
+  digitalWrite(verde, LOW);
+  digitalWrite(rojo, LOW);
+  delay(2000); 
 }
 ```
 ____
