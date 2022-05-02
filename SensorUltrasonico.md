@@ -22,7 +22,7 @@ void loop()
   delay(1);
   digitalWrite(trig, LOW);
   tiempo= pulseIn(echo, HIGH);
-  distancia = tiempo / 58.2; 
+  distancia = tiempo / 58.2;  
   
   if (distancia < 50)
   {
