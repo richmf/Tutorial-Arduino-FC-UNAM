@@ -33,10 +33,6 @@ void loop()
     digitalWrite(led, LOW);
     {
     }
-  digitalWrite(led, HIGH);
-  delay(2000); 
-  digitalWrite(led, LOW);
-  delay(1000);
   }
 }
 ```
