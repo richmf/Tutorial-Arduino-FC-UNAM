@@ -2,7 +2,7 @@
 
 ```cpp
 int led = 13;
-int pir = 7;
+int pir = 12;
 int pirdato;
 
 void setup()
