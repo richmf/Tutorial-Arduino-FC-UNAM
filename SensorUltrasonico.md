@@ -1,8 +1,6 @@
 ## Copia y pega esta parte del código:
 
 ```cpp
-// C++ code
-//
 int trig = 7;
 int echo = 4;
 int led = 10;
