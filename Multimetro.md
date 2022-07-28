@@ -10,12 +10,12 @@ int a,b,c;
 long volt,current,power,ah;
 // las 8 lineas que forman cada segmento de los números personalizados
 unsigned long msec = 0;
-float time = 0.0;
-int sample = 0;
-float totalCharge = 0.0;
-float averageAmps = 0.0;
-float ampSeconds = 0.0;
-long ampHours = 0;
+float tiempo = 0.0;
+int muestra = 0;
+float cargatotal = 0.0;
+float AmPromedio = 0.0;
+float Amsegundos = 0.0;
+long Amphora = 0;
 
 void setup()
 {
@@ -41,21 +41,21 @@ volt=volt+a;
    volt=volt/30;
    power=(volt*current)/1000;
  //--------------------  
-     sample = sample + 1;
+     muestra = muestra + 1;
   
   msec = millis();
   
   
   
- time = (float) msec / 1000.0;
+ tiempo = (float) msec / 1000.0;
   
- totalCharge = totalCharge + (current);
+ cargatotal = cargatotal + (current);
   
- averageAmps = totalCharge / sample;
+ AmPromedio = cargatotal / muestra;
   
- ampSeconds = averageAmps*time;
+ Amsegundos = AmPromedio*tiempo;
 
- ampHours = ampSeconds/3600;
+ Amphora = Amsegundos/3600;
 
  //--------------
     Serial.print(volt);
@@ -65,9 +65,9 @@ Serial.print("  ");
         Serial.print(power);
 
         Serial.print("  ");
-        Serial.print(ampHours);
+        Serial.print(Amphora);
          Serial.print("  ");
-        Serial.println(time);
+        Serial.println(tiempo);
         
  lcd.setCursor(6,0);
   lcd.print("V");
@@ -126,18 +126,18 @@ Serial.print("  ");
   lcd.setCursor(14,1);
   lcd.print("AH");
   
-   b=ampHours%10;
+   b=Amphora%10;
      lcd.setCursor(13,1);
   lcd.print(b);
-    b=(ampHours/10)%10;
+    b=(Amphora/10)%10;
      lcd.setCursor(12,1);
   lcd.print(b);
    lcd.setCursor(11,1);
   lcd.print(".");
-   b=(ampHours/100)%10;
+   b=(Amphora/100)%10;
      lcd.setCursor(10,1);
   lcd.print(b);
-     b=(ampHours/1000)%10;
+     b=(Amphora/1000)%10;
      lcd.setCursor(9,1);
   lcd.print(b);
  
