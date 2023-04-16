@@ -1,8 +1,10 @@
 # Tutorial Arduino FC-UNAM
  
 Autores:
-Est. Javier Damián García Galicia
-Dr. Ricardo Méndez Fragoso
+
+- Est. Javier Damián García Galicia
+
+- Dr. Ricardo Méndez Fragoso
 
 En este repositorio se encuentran los códigos fuente de diferente ejemplos y actividades para aprender a utilizar un Arduino, que son parte de un tutorial que se encuentra en el siguiente enlace:
 https://sites.google.com/ciencias.unam.mx/tutorial-de-arduino/home
